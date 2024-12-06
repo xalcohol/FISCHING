@@ -1,0 +1,59 @@
+
+-- Keybind List:
+--/ H = Render // K = Farm // Y = Inf Yield // L = Anti Lag
+--/ P = Enable TP Location
+
+local UIS = game:GetService('UserInputService')
+local bool = false
+local farm = false
+local yield = false
+local tps = false
+
+UIS.InputBegan:Connect(function(input)
+
+    -- P = TP Toggle
+    if input.KeyCode == Enum.KeyCode.P then
+        if tps == false then
+            tps = true
+        end
+
+        if tps == true then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
+            tps = false
+            
+        end
+    end
+
+    -- H = Render
+    if input.KeyCode == Enum.KeyCode.H then
+        if bool == false then
+            game:GetService("RunService"):Set3dRenderingEnabled(false)
+            bool = true
+        else
+            game:GetService("RunService"):Set3dRenderingEnabled(true)
+            bool = false
+        end
+    end
+
+    -- K = Farm
+    if input.KeyCode == Enum.KeyCode.K then
+        if farm == false then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/Fisch.lua"))();
+            farm = true
+        end
+    end
+
+    -- Y = Inf Yield
+    if input.KeyCode == Enum.KeyCode.Y then
+        if yield == false then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
+            yield = true
+        end
+    end
+
+    -- L = Anti Lag
+    if input.KeyCode == Enum.KeyCode.L then
+        loadstring(game:HttpGet("https://pastebin.com/raw/SmTSqyDh"))();
+    end
+
+end) 
