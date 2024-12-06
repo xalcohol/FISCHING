@@ -8,7 +8,7 @@ UIS.InputBegan:Connect(function(input)
         game:GetService('ReplicatedStorage').events.purchase:FireServer('Nuke', 'Item', nil, 5)
     end
 end)
-
+wait(5)
 local args = {
     [1] = "Developers Rod"
 }
