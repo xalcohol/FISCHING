@@ -17,7 +17,8 @@ UIS.InputBegan:Connect(function(input)
         tps = true
      end
 
-    if input.KeyCode == Enum.KeyCode.P and tps == true then
+    if tps == true then
+        print("TPS DISABLED")
         tps = false   
     end
 
