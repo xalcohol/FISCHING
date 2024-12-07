@@ -17,6 +17,7 @@ UIS.InputBegan:Connect(function(input)
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
             tps = true
         end
+    end
 
     -- H = Render
     if input.KeyCode == Enum.KeyCode.H then
