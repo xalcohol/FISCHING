@@ -8,8 +8,6 @@ local bool = false
 local farm = false
 local yield = false
 
-cas:BindAction("Toggle", onTOGGLER, false, Enum.KeyCode.P)
-
 UIS.InputBegan:Connect(function(input)
 
     -- P = TP Toggle
@@ -17,7 +15,9 @@ UIS.InputBegan:Connect(function(input)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
         print("Enabled")
     end    
-        
+    
+    cas:BindAction("Toggle", onTOGGLER, false, Enum.KeyCode.P)
+    
     if input.KeyCode == Enum.KeyCode.P then
         task.wait(1)
         cas:UnbindAction("P")
