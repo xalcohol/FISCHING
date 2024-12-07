@@ -41,7 +41,8 @@ function onP()
     cas:UnbindAction("U")
     cas:UnbindAction("T")
     cas:UnbindAction("J")
-    print("TPS DISABLED")
+    wait(1)
+    cas:UnbindAction("P")
 end
 
 cas:BindAction("DISABLE", onP, false, Enum.KeyCode.P)
