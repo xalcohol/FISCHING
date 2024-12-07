@@ -11,6 +11,11 @@ UIS.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.Q then
         game:GetService('ReplicatedStorage').events.purchase:FireServer('Nuke', 'Item', nil, 5)
     end
+
+    -- X = Quick Pop Nukes
+    if input.KeyCode == Enum.KeyCode.X then
+        game:GetService("ReplicatedStorage"):WaitForChild("packages"):WaitForChild("Net"):WaitForChild("RE/Nuke"):FireServer()
+    end
 end)
 
 wait(5)
