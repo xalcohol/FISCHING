@@ -15,6 +15,7 @@ UIS.InputBegan:Connect(function(input)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
         print("TPS ENABLED")
         tps = true
+        wait(3)
      end
 
      if input.KeyCode == Enum.KeyCode.P and tps == true then
