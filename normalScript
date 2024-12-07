@@ -7,22 +7,17 @@ local bool = false
 local farm = false
 local yield = false
 local tps = false
-local cas = game:GetService("ContextActionService")
-local function onPKeyPressed()
-print("TPS DISABLED")
-end
-cas:BindAction("F", onPKeyPressed, false, Enum.KeyCode.F)
 
 UIS.InputBegan:Connect(function(input)
 
     -- P = TP Toggle
     if input.KeyCode == Enum.KeyCode.P and tps == false then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
+        print("TPS ENABLED")
         tps = true
      end
 
-    if tps == true then
-        cas:UnbindAction("F")
+    else if tps == true then
         tps = false   
     end
 
