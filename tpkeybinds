@@ -1,5 +1,5 @@
 -- Keybind List:
---/ F = Goldfish Pond // B = Ancient Pond // N = Ancient Waterfall // U = Merlin // T = Enchant // J = Appraiser
+--/ F = Goldfish Pond // B = Ancient Pond // N = Ancient Waterfall // U = Merlin // T = Enchant // J = Appraiser // V = Meteor
 
 local UIS = game:GetService('UserInputService')
 local tps = false
@@ -38,6 +38,11 @@ UIS.InputBegan:Connect(function(input)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(448.38623, 150.538727, 207.106369, -0.000520022062, 7.57654846e-08, -0.999999881, 6.58193997e-08, 1, 7.57312648e-08, 0.999999881, -6.57800143e-08, -0.000520022062)
         end
         
+        --/ V = Meteor
+        if input.KeyCode == Enum.KeyCode.V then 
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5718.28613, 174.110138, 595.572754, -0.829342961, -5.38202869e-08, 0.558739901, -1.24047377e-08, 1, 7.79119347e-08, -0.558739901, 5.76846908e-08, -0.829342961)
+        end
+
         --/ TP VERIFY
         if input.KeyCode == Enum.KeyCode.P then
             tps = true
