@@ -12,13 +12,16 @@ local tps = false
 UIS.InputBegan:Connect(function(input)
 
     -- P = TP Toggle
-    if input.KeyCode == Enum.KeyCode.P and tps == then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
-        tps = true
-     end
+    if input.KeyCode == Enum.KeyCode.P then
+        if tps == false then
+            tps = true
+        end
 
-    elseif tps == true then
-        tps = false   
+        if tps == true then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
+            tps = false
+            
+        end
     end
 
     -- H = Render
