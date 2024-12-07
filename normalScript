@@ -17,7 +17,7 @@ UIS.InputBegan:Connect(function(input)
         tps = true
      end
 
-    else if tps == true then
+    if tps == true then
         tps = false   
     end
 
