@@ -1,0 +1,5 @@
+game:GetService("ReplicatedStorage").events.purchase:FireServer("Flimsy Rod", "Rod", nil, math.huge)
+game:GetService("ReplicatedStorage").events.purchase:FireServer("Developers Rod", "Rod", nil, math.huge)
+game:GetService('ReplicatedStorage').events.purchase:FireServer('Nuke', 'Item', nil, 5)
+game:GetService('ReplicatedStorage').events.purchase:FireServer('Sundial Totem', 'Item', nil, 500)
+game:GetService('ReplicatedStorage').events.purchase:FireServer('Aurora Totem', 'Item', nil, 500)
