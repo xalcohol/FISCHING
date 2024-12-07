@@ -10,7 +10,6 @@ local yield = false
 
 local function onTOGGLER()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
-    print("Enabled")
 end    
     
 cas:BindAction("Toggle", onTOGGLER, false, Enum.KeyCode.P)
@@ -19,6 +18,7 @@ UIS.InputBegan:Connect(function(input)
 
     -- P = TP Toggle
     if input.KeyCode == Enum.KeyCode.P then
+        print("Enabled")
         task.wait(1)
         cas:UnbindAction("Toggle")
     end
