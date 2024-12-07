@@ -45,10 +45,10 @@ function onP()
     cas:UnbindAction("P")
 end
 
-cas:BindAction("DISABLE", onP, false, Enum.KeyCode.P)
 cas:BindAction("F", onF, false, Enum.KeyCode.F)
 cas:BindAction("B", onB, false, Enum.KeyCode.B)
 cas:BindAction("N", onN, false, Enum.KeyCode.N)
 cas:BindAction("U", onU, false, Enum.KeyCode.U)
 cas:BindAction("T", onT, false, Enum.KeyCode.T)
 cas:BindAction("J", onJ, false, Enum.KeyCode.J)
+cas:BindAction("DISABLE", onP, false, Enum.KeyCode.P)
