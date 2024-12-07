@@ -16,7 +16,7 @@ UIS.InputBegan:Connect(function(input)
         tps = true
      end
 
-    elseif tps == true then
+    else if tps == true then
         local cas = game:GetService("ContextActionService")
 
         local function onPKeyPressed()
