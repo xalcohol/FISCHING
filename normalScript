@@ -1,27 +1,22 @@
+
 -- Keybind List:
 --/ H = Render // K = Farm // Y = Inf Yield // L = Anti Lag
 --/ P = Enable TP Location
 
 local UIS = game:GetService('UserInputService')
-local cas = game:GetService("ContextActionService")
 local bool = false
 local farm = false
 local yield = false
-
-local function onTOGGLER()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
-end    
-    
-cas:BindAction("Toggle", onTOGGLER, false, Enum.KeyCode.P)
+local tps = false
 
 UIS.InputBegan:Connect(function(input)
 
     -- P = TP Toggle
     if input.KeyCode == Enum.KeyCode.P then
-        print("Enabled")
-        task.wait(1)
-        cas:UnbindAction("Toggle")
-    end
+        if tps == false then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
+            tps = true
+        end
 
     -- H = Render
     if input.KeyCode == Enum.KeyCode.H then
