@@ -1,31 +1,41 @@
 -- Keybind List:
---/ F = Goldfish Pond // U = Ancient Pond // N = Ancient Waterfall // R = Merlin // T = Enchant
+--/ F = Goldfish Pond // B = Ancient Pond // N = Ancient Waterfall // U = Merlin // T = Enchant // J = Appraiser
 
-local UIS = game:GetService('UserInputService')
-UIS.InputBegan:Connect(function(input)
+local cas = game:GetService("ContextActionService")
 
-    -- F = Goldfish Pond
-    if input.KeyCode == Enum.KeyCode.F then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2675.57251, 164.750626, 1758.47498, 0.24143818, -5.36043352e-08, 0.970416188, 1.09873328e-08, 1, 5.25048662e-08, -0.970416188, -2.01439376e-09, 0.24143818)
-    end
+function onF()
+    --/ F = Goldfish Pond
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2675.57251, 164.750626, 1758.47498, 0.24143818, -5.36043352e-08, 0.970416188, 1.09873328e-08, 1, 5.25048662e-08, -0.970416188, -2.01439376e-09, 0.24143818)
+end
 
-    -- U = Ancient Isle Pond
-    if input.KeyCode == Enum.KeyCode.U then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6005.43213, 196.496552, 289.496979, -0.951005816, -4.29228777e-08, 0.309172988, -1.46297072e-08, 1, 9.38307707e-08, -0.309172988, 8.47104999e-08, -0.951005816)
-    end
+function onB()
+    --/ B = Ancient Isle Pond
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6005.43213, 196.496552, 289.496979, -0.951005816, -4.29228777e-08, 0.309172988, -1.46297072e-08, 1, 9.38307707e-08, -0.309172988, 8.47104999e-08, -0.951005816)
+end
 
-    -- N = Ancient Isle Waterfall
-    if input.KeyCode == Enum.KeyCode.N then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5808.57959, 142.478363, 309.513733, -0.0429343693, 3.55115013e-08, 0.999077916, 6.90300084e-09, 1, -3.5247627e-08, -0.999077916, 5.38330092e-09, -0.0429343693)
-    end
+function onN()
+    --/ N = Ancient Isle Waterfall
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5808.57959, 142.478363, 309.513733, -0.0429343693, 3.55115013e-08, 0.999077916, 6.90300084e-09, 1, -3.5247627e-08, -0.999077916, 5.38330092e-09, -0.0429343693)
+end
 
-    -- R = Merlin's Shack
-    if input.KeyCode == Enum.KeyCode.R then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-950.411377, 222.05545, -986.25354, 0.0243353806, 1.16846302e-08, -0.999703825, -2.23824792e-10, 1, 1.16826424e-08, 0.999703825, -6.05430567e-11, 0.0243353806)
-    end
-    
-    -- T = Keeper's Altar (Enchant)
-    if input.KeyCode == Enum.KeyCode.T then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1312.52014, -770.851135, -42.3866806, 0.995870113, 1.39151011e-08, 0.0907895938, -8.28027424e-09, 1, -6.24413374e-08, -0.0907895938, 6.14316988e-08, 0.995870113)
-    end
-end)
+function onU()
+    --/ U = Merlin
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-950.411377, 222.05545, -986.25354, 0.0243353806, 1.16846302e-08, -0.999703825, -2.23824792e-10, 1, 1.16826424e-08, 0.999703825, -6.05430567e-11, 0.0243353806)
+end
+
+function onT()
+    --/ T = Enchant
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1312.52014, -770.851135, -42.3866806, 0.995870113, 1.39151011e-08, 0.0907895938, -8.28027424e-09, 1, -6.24413374e-08, -0.0907895938, 6.14316988e-08, 0.995870113)
+end
+
+function onJ()
+    --/ J = Appraiser
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(448.38623, 150.538727, 207.106369, -0.000520022062, 7.57654846e-08, -0.999999881, 6.58193997e-08, 1, 7.57312648e-08, 0.999999881, -6.57800143e-08, -0.000520022062)
+end
+
+cas:BindAction("FTP", onF, false, Enum.KeyCode.F)
+cas:BindAction("BTP", onB, false, Enum.KeyCode.B)
+cas:BindAction("NTP", onN, false, Enum.KeyCode.N)
+cas:BindAction("UTP", onU, false, Enum.KeyCode.U)
+cas:BindAction("TTP", onT, false, Enum.KeyCode.T)
+cas:BindAction("JTP", onJ, false, Enum.KeyCode.J)
