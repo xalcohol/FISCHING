@@ -20,7 +20,7 @@ UIS.InputBegan:Connect(function(input)
     
     if input.KeyCode == Enum.KeyCode.P then
         task.wait(1)
-        cas:UnbindAction("P")
+        cas:UnbindAction("Toggle")
     end
 
     -- H = Render
