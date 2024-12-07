@@ -3,3 +3,17 @@ game:GetService("ReplicatedStorage").events.purchase:FireServer("Developers Rod"
 game:GetService('ReplicatedStorage').events.purchase:FireServer('Nuke', 'Item', nil, 5)
 game:GetService('ReplicatedStorage').events.purchase:FireServer('Sundial Totem', 'Item', nil, 500)
 game:GetService('ReplicatedStorage').events.purchase:FireServer('Aurora Totem', 'Item', nil, 500)
+
+local UIS = game:GetService('UserInputService')
+UIS.InputBegan:Connect(function(input)
+    -- Q = Grant More Nukes
+    if input.KeyCode == Enum.KeyCode.Q then
+        game:GetService('ReplicatedStorage').events.purchase:FireServer('Nuke', 'Item', nil, 5)
+    end
+end)
+
+wait(5)
+local args = {
+    [1] = "Developers Rod"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("events"):WaitForChild("equiprod"):FireServer(unpack(args))
