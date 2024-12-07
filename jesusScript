@@ -1,2 +1,5 @@
+-- Updated 12/06/24
+--/ Q = Nuke
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/normalScript"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/granter"))()
