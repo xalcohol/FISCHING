@@ -39,7 +39,7 @@ UIS.InputBegan:Connect(function(input)
         end
         
         --/ X = Meteor
-        if input.KeyCode == Enum.KeyCode.V then 
+        if input.KeyCode == Enum.KeyCode.X then 
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5718.28613, 174.110138, 595.572754, -0.829342961, -5.38202869e-08, 0.558739901, -1.24047377e-08, 1, 7.79119347e-08, -0.558739901, 5.76846908e-08, -0.829342961)
         end
 
