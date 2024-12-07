@@ -18,14 +18,6 @@ UIS.InputBegan:Connect(function(input)
      end
 
     elseif tps == true then
-        local cas = game:GetService("ContextActionService")
-
-        local function onPKeyPressed()
-	    print("TPS DISABLED")
-        end
-
-        cas:BindAction("F", onPKeyPressed, false, Enum.KeyCode.F)
-        cas:UnbindAction("F")
         tps = false   
     end
 
