@@ -4,7 +4,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/mBKhNHKm"))()
 local UIS = game:GetService('UserInputService')
 UIS.InputBegan:Connect(function(input)
     -- J = Grant More Nukes
-    if input.KeyCode == Enum.KeyCode.J then
+    if input.KeyCode == Enum.KeyCode.Q then
         game:GetService('ReplicatedStorage').events.purchase:FireServer('Nuke', 'Item', nil, 5)
     end
 end)
