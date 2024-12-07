@@ -11,12 +11,12 @@ local tps = false
 UIS.InputBegan:Connect(function(input)
 
     -- P = TP Toggle
-    if input.KeyCode == Enum.KeyCode.P and tps == then
+    if input.KeyCode == Enum.KeyCode.P and tps == false then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/FISCHING/refs/heads/main/tpkeybinds"))()
         tps = true
      end
 
-    else if tps == true then
+    elseif tps == true then
         local cas = game:GetService("ContextActionService")
 
         local function onPKeyPressed()
