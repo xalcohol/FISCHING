@@ -45,7 +45,8 @@ UIS.InputBegan:Connect(function(input)
     end
 
     --/ TP VERIFY
-    else if input.KeyCode == Enum.KeyCode.P then
+    else if tps = true then
+        if input.KeyCode == Enum.KeyCode.P then
         tps = false
     end  
 
