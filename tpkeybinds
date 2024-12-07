@@ -6,8 +6,8 @@ local tps = false
 
 UIS.InputBegan:Connect(function(input)
 
-    if tps == false then
 
+    if tps == false then
         --/ F = Goldfish Pond
         if input.KeyCode == Enum.KeyCode.F then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2675.57251, 164.750626, 1758.47498, 0.24143818, -5.36043352e-08, 0.970416188, 1.09873328e-08, 1, 5.25048662e-08, -0.970416188, -2.01439376e-09, 0.24143818)
@@ -42,12 +42,10 @@ UIS.InputBegan:Connect(function(input)
         if input.KeyCode == Enum.KeyCode.P then
             tps = true
         end
-    end
-
-    --/ TP VERIFY
-    else if tps = true then
+        
+    else
         if input.KeyCode == Enum.KeyCode.P then
-        tps = false
-    end  
-
+            tps = false
+        end
+    end
 end)
