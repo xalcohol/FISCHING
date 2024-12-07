@@ -33,9 +33,21 @@ function onJ()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(448.38623, 150.538727, 207.106369, -0.000520022062, 7.57654846e-08, -0.999999881, 6.58193997e-08, 1, 7.57312648e-08, 0.999999881, -6.57800143e-08, -0.000520022062)
 end
 
-cas:BindAction("FTP", onF, false, Enum.KeyCode.F)
-cas:BindAction("BTP", onB, false, Enum.KeyCode.B)
-cas:BindAction("NTP", onN, false, Enum.KeyCode.N)
-cas:BindAction("UTP", onU, false, Enum.KeyCode.U)
-cas:BindAction("TTP", onT, false, Enum.KeyCode.T)
-cas:BindAction("JTP", onJ, false, Enum.KeyCode.J)
+function onP()
+    --/ P = Disable TP
+    cas:UnbindAction("F")
+    cas:UnbindAction("B")
+    cas:UnbindAction("N")
+    cas:UnbindAction("U")
+    cas:UnbindAction("T")
+    cas:UnbindAction("J")
+    print("TPS DISABLED")
+end
+
+cas:BindAction("DISABLE", onP, false, Enum.KeyCode.P)
+cas:BindAction("F", onF, false, Enum.KeyCode.F)
+cas:BindAction("B", onB, false, Enum.KeyCode.B)
+cas:BindAction("N", onN, false, Enum.KeyCode.N)
+cas:BindAction("U", onU, false, Enum.KeyCode.U)
+cas:BindAction("T", onT, false, Enum.KeyCode.T)
+cas:BindAction("J", onJ, false, Enum.KeyCode.J)
